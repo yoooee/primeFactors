@@ -16,6 +16,7 @@ describe('Prime Factors', () => {
     assertPrimeFactors(3, list(3));
     assertPrimeFactors(4, list(2,2));
     assertPrimeFactors(5, list(5));
+    assertPrimeFactors(6, list(2,3));
   });
 
   const of = (n: number): Array<number> => {

@@ -15,6 +15,7 @@ describe('Prime Factors', () => {
     assertPrimeFactors(2, list(2));
     assertPrimeFactors(3, list(3));
     assertPrimeFactors(4, list(2,2));
+    assertPrimeFactors(5, list(5));
   });
 
   const of = (n: number): Array<number> => {
@@ -24,9 +25,9 @@ describe('Prime Factors', () => {
         factors.push(2);
         n /= 2;
       }
-      if (n > 1)
-        factors.push(n);
     }
+    if (n > 1)
+      factors.push(n);
     return factors;
   }
 

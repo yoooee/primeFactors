@@ -24,15 +24,14 @@ describe('Prime Factors', () => {
 
   const of = (n: number): Array<number> => {
     const factors: Array<number> = new Array<number>();
-    if (n > 1) {
-      while (n%2 === 0) {
-        factors.push(2);
-        n /= 2;
+    let divisor = 2;
+
+    while (n > 1) {
+      while (n % divisor === 0) {
+        factors.push(divisor);
+        n /= divisor;
       }
-      while (n%3 === 0) {
-        factors.push(3);
-        n /= 3;
-      }
+      divisor++;
     }
     if (n > 1)
       factors.push(n);

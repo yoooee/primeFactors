@@ -26,15 +26,10 @@ describe('Prime Factors', () => {
     const factors: Array<number> = new Array<number>();
     let divisor = 2;
 
-    while (n > 1) {
-      while (n % divisor === 0) {
+    for (let divisor = 2; n > 1; divisor++)
+      for (; n % divisor === 0; n /= divisor)
         factors.push(divisor);
-        n /= divisor;
-      }
-      divisor++;
-    }
-    if (n > 1)
-      factors.push(n);
+
     return factors;
   }
 
